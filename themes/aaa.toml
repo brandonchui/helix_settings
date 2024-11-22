@@ -1,0 +1,91 @@
+inherits = "default"
+
+"ui.background" = { bg = "background" }
+"ui.cursor" = { fg = "cursor_fg", bg = "cursor_bg" }
+"ui.cursor.primary" = { fg = "cursor_fg", bg = "cursor_bg" }
+"ui.cursor.match" = { fg = "black", bg = "cursor_match" }
+"ui.linenr" = { fg = "line_number" }
+"ui.linenr.selected" = { fg = "line_number_active" }
+"ui.statusline" = { fg = "text", bg = "margin" }
+"ui.statusline.inactive" = { fg = "text", bg = "margin" }
+"ui.text" = { fg = "text" }
+"ui.text.focus" = { fg = "text", bg = "highlight" }
+"ui.virtual.whitespace" = { fg = "ghost" }
+"ui.selection" = { bg = "highlight" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.highlight" = { bg = "highlight" }
+"ui.menu" = { fg = "text", bg = "margin" }
+"ui.menu.selected" = { fg = "text", bg = "margin_hover" }
+"ui.popup" = { fg = "text", bg = "margin" }
+"ui.window" = { fg = "margin" }
+
+"markup.heading" = { fg = "keyword" }
+"markup.list" = { fg = "keyword" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "constant" }
+"markup.link.text" = { fg = "constant" }
+"markup.quote" = { fg = "comment" }
+
+"variable" = { fg = "text" }
+"variable.builtin" = { fg = "keyword" }
+"variable.parameter" = { fg = "text" }
+"variable.other.member" = { fg = "text" }
+
+"constant" = { fg = "constant" }
+"constant.numeric" = { fg = "constant" }
+"constant.character" = { fg = "constant" }
+"constant.character.escape" = { fg = "special" }
+
+"type" = { fg = "text" }
+"type.builtin" = { fg = "text" }
+
+"string" = { fg = "constant" }
+"string.regexp" = { fg = "constant" }
+"string.special" = { fg = "constant" }
+
+"comment" = { fg = "comment" }
+"function" = { fg = "text" }
+"function.macro" = { fg = "preproc" }
+"keyword" = { fg = "keyword" }
+"operator" = { fg = "operator" }
+"namespace" = { fg = "text" }
+
+"special" = { fg = "special" }
+"punctuation" = { fg = "syntax" }
+
+"diff.plus" = { fg = "green" }
+"diff.minus" = { fg = "red" }
+"diff.delta" = { fg = "blue" }
+
+diagnostic = { underline = { color = "red", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "blue", style = "curl" } }
+"diagnostic.info" = { underline = { color = "green", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+
+[palette]
+background = "#020202"
+black = "#0C0C0C"
+margin = "#222425"
+margin_hover = "#63523d"
+cursor_fg = "#00EE00"
+cursor_bg = "#e0741b"
+cursor_match = "#8ffff2"
+text = "#b99468"
+comment = "#666666"
+keyword = "#f0c674"
+constant = "#ffa900"
+preproc = "#dc7575"
+special = "#FF0000"
+syntax = "#5c4d3c"
+operator = "#bd2d2d"
+ghost = "#4E5E46"
+highlight = "#303040"
+cursorline = "#1E1E1E"
+line_number = "#404040"
+line_number_active = "#b99468"
+green = "#35bf86"
+red = "#f22c86"
+blue = "#6f44f0"
+yellow = "#ffcd1c"
