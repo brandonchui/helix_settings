@@ -1,3 +1,32 @@
+# Define the language server configuration for clangd (used by both C and C++)
+[language-server.clangd]
+command = "clangd"
+args = ["--compile-commands-dir=compile_commands_directory"]
+
+# Define the language server configuration for Zig
+[language-server.zls]
+command = "zls"
+
+# C Language Configuration
+[[language]]
+name = "c"
+file-types = ["c", "h"]  # Extensions for C files
+auto-format = true       # Format on save
+language-servers = ["clangd"]  # Reference the clangd language server
+formatter = { command = "clang-format", args = ["--assume-filename", "file.c"] }
+
+# C++ Language Configuration
 [[language]]
 name = "cpp"
-language-server = { command = "clangd", args=["--compile-commands-dir=compile_commands_directory"] }
+file-types = ["cpp", "hpp", "h", "cxx", "cc"]  # Extensions for C++ files
+auto-format = true       # Format on save
+language-servers = ["clangd"]  # Reference the clangd language server
+formatter = { command = "clang-format", args = ["--assume-filename", "file.cpp"] }
+
+# Zig Language Configuration
+[[language]]
+name = "zig"
+file-types = ["zig"]  # Extensions for Zig files
+auto-format = true    # Format on save
+language-servers = ["zls"]  # Reference the zls language server
+formatter = { command = "zig", args = ["fmt", "--stdin"] }
