@@ -1,4 +1,4 @@
-theme = "catppuccin_macchiato"
+theme = "aaaa";
 
 [editor]
 line-number = "relative"
@@ -22,7 +22,15 @@ F9 = [
   "open_below",
   ":insert-output echo /////~ ",
   "insert_at_line_end",]
+  
+F1 = [":insert-output echo // NOTE(bchui): ", "insert_at_line_end",]
+F2 = [":insert-output echo // TODO(bchui): ", "insert_at_line_end",]
 F4 = ":run-shell-command run.bat"
+
+F8 = ["select_regex", "align_selections", "merge_selections"]
+
+
+"g" = { "D" = ["vsplit", "jump_view_up", "goto_definition"] }
 
 [keys.insert]
 j = { j = "normal_mode" }

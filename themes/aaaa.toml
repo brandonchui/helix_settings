@@ -1,0 +1,106 @@
+# Autumn Night Theme - Dark and warm minimal syntax highlighting
+"attribute" = { fg = "ui-text" }
+"comment" = { fg = "comment-gray" }
+"comment.block.documentation" = { fg = "todo-blue", modifiers = ["bold", "italic"] }
+"constant" = { fg = "ui-text" }
+"constant.numeric" = { fg = "warm-gold" }  # Deeper gold for numbers
+"constant.builtin" = { fg = "terracotta" }
+"constant.builtin.boolean" = { fg = "terracotta" }
+"constant.character.escape" = { fg = "ui-text" }
+"constructor" = { fg = "ui-text" }
+"function" = { fg = "ui-text"}
+"function.builtin" = { fg = "ui-text"}
+"function.method" = { fg = "ui-text"}
+"function.macro" = { fg = "ui-text"}
+"keyword" = { fg = "ui-text" }
+"keyword.control" = { fg = "burnt-orange" }        # Control flow in deeper orange
+"keyword.control.conditional" = { fg = "burnt-orange" }
+"keyword.control.repeat" = { fg = "burnt-orange" }
+"keyword.storage.type" = { fg = "terracotta" }     # Types in deeper terracotta
+"label" = { fg = "ui-text" }
+"namespace" = { fg = "ui-text" }
+"operator" = { fg = "ui-text" }
+"puncuation" = { fg = "ui-text" }
+"special" = { fg = "note-green", modifiers = ["bold", "italic"] }
+"string" = { fg = "string-color" }                     # Strings in deeper tan
+"type" = { fg = "terracotta" }    
+"type.builtin" = { fg = "terracotta" }            # Types in deeper terracotta
+"type.parameter" = { fg = "terracotta" }
+"variable.builtin" = { fg = "ui-text" }
+"variable.parameter" = { fg = "ui-text" }
+"variable.other.member" = { fg = "ui-text" }
+"text.warning" = { fg = "#ffcd1c", modifiers = ["bold"] }
+"text.error" = { fg = "#f47868", modifiers = ["bold"] }
+
+# UI styling
+"markup.heading" = { fg = "warm-tan" }
+"markup.raw.inline" = { fg = "warm-tan" }
+"markup.bold" = { fg = "warm-tan", modifiers = ["bold"] }
+"markup.italic" = { fg = "warm-tan", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.list" = { fg = "warm-tan" }
+"markup.quote" = { fg = "warm-tan" }
+"markup.link.url" = { fg = "terracotta", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "terracotta" }
+"diff.plus" = "warm-tan"
+"diff.delta" = "burnt-orange"
+"diff.minus" = "red"
+"diagnostic.info".underline = { color = "comment-gray", style = "curl" }
+"diagnostic.hint".underline = { color = "warm-tan", style = "curl" }
+"diagnostic.warning".underline = { color = "burnt-orange", style = "curl" }
+"diagnostic.error".underline = { color = "red", style = "curl" }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"info" = { fg = "comment-gray", modifiers = ["bold"] }
+"hint" = { fg = "warm-tan", modifiers = ["bold"] }
+"warning" = { fg = "burnt-orange", modifiers = ["bold"] }
+"error" = { fg = "red", modifiers = ["bold"] }
+"ui.background" = { bg = "black" }
+"ui.gutter" = { bg = "dark-gray" }
+"ui.virtual" = { fg = "gray" }
+"ui.virtual.indent-guide" = { fg = "#252123" }
+"ui.virtual.whitespace" = { fg = "gray" }
+"ui.virtual.ruler" = { bg = "dark-gray" }
+"ui.virtual.inlay-hint" = { fg = "gray", modifiers = ["bold"] }
+"ui.cursor" = { fg = "ui-text", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "ui-text", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "ui-text", modifiers = ["underlined"] }
+"ui.selection" = { bg = "darker-gray" }
+"ui.selection.primary" = { bg = "darkest-gray" }
+"ui.cursorline.primary" = { bg = "dark-gray" }
+"ui.highlight" = { bg = "darker-gray" }
+"ui.highlight.frameline" = { bg = "darkest-gray" }
+"ui.linenr" = { fg = "gray" }
+"ui.linenr.selected" = { fg = "ui-text" }
+"ui.statusline" = { fg = "ui-text", bg = "dark-gray" }
+"ui.statusline.inactive" = { fg = "gray", bg = "darker-gray" }
+"ui.statusline.normal" = { fg = "black", bg = "warm-tan" }
+"ui.statusline.insert" = { fg = "black", bg = "terracotta" }
+"ui.statusline.select" = { fg = "black", bg = "burnt-orange" }
+"ui.text" = { fg = "ui-text" }
+"ui.text.focus" = { fg = "ui-text", bg = "darker-gray", modifiers = ["bold"] }
+"ui.help" = { fg = "ui-text", bg = "darker-gray" }
+"ui.popup" = { bg = "darker-gray" }
+"ui.window" = { fg = "dark-gray" }
+"ui.menu" = { fg = "ui-text", bg = "darker-gray" }
+"ui.menu.selected" = { fg = "black", bg = "warm-tan" }
+"ui.menu.scroll" = { fg = "ui-text", bg = "dark-gray" }
+"ui.debug" = { fg = "red" }
+
+[palette]
+# Autumn Night palette
+warm-gold = "#D49B52"        # Deeper gold for numbers
+warm-tan = "#BC8F6A"         # Deeper tan for strings
+burnt-orange = "#B15F4F"     # Deeper orange for control flow
+terracotta = "#A67A65"       # Deeper terracotta for types
+comment-gray = "#626F7D"     # Darker comment gray
+red = "#A84D5B"             # Deeper red for errors
+black = "#1F1C1E"           # Darker warm-tinted background
+ui-text = "#C5BFB6"         # Slightly dimmed text
+dark-gray = "#282426"       # Darker UI elements
+darker-gray = "#312D2F"     # Darker selections
+darkest-gray = "#3A3638"    # Darker primary selections
+gray = "#4D4A4C"           # Darker subtle UI elements
+note-green = "#7EA87F"    # For NOTE comments
+todo-blue = "#878EC0"     # For TODO comments
+string-color = "#A6D189"
