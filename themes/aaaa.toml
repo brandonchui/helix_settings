@@ -62,8 +62,9 @@
 "ui.virtual.whitespace" = { fg = "gray" }
 "ui.virtual.ruler" = { bg = "dark-gray" }
 "ui.virtual.inlay-hint" = { fg = "gray", modifiers = ["bold"] }
+"ui.virtual.jump-label" = { fg = "burnt-orange" }  # Just orange text, no background for gw
 "ui.cursor" = { fg = "ui-text", modifiers = ["reversed"] }
-"ui.cursor.primary" = { fg = "ui-text", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "white", bg = "burnt-orange" }
 "ui.cursor.match" = { fg = "ui-text", modifiers = ["underlined"] }
 "ui.selection" = { bg = "darker-gray" }
 "ui.selection.primary" = { bg = "darkest-gray" }
