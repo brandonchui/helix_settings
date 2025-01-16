@@ -1,0 +1,117 @@
+# Autumn Night Theme - Dark and warm minimal syntax highlighting
+"attribute" = { fg = "ui-text" }
+"comment" = { fg = "comment-gray" }
+"comment.block.documentation" = { fg = "todo-blue", modifiers = ["bold", "italic"] }
+"constant" = { fg = "ui-text" }
+"constant.numeric" = { fg = "warm-gold" }  # Numbers stay colored
+"constant.builtin" = { fg = "ui-text" }
+"constant.builtin.boolean" = { fg = "ui-text" }
+"constant.character.escape" = { fg = "ui-text" }
+"constructor" = { fg = "ui-text" }
+"function" = { fg = "function-color" }
+"function.builtin" = { fg = "function-color" }
+"function.method" = { fg = "function-color" }
+"function.macro" = { fg = "function-color" }
+"keyword" = { fg = "ui-text" }
+"keyword.control" = { fg = "ui-text" }
+"keyword.control.conditional" = { fg = "ui-text" }
+"keyword.control.repeat" = { fg = "ui-text" }
+"keyword.storage.type" = { fg = "ui-text" }
+"keyword.directive" = { fg = "preprocessor-color" }      # For #ifdef, #endif
+"preprocessing" = { fg = "preprocessor-color" }
+"preprocessing.include" = { fg = "include-color" }
+"constant.builtin.preprocessor" = { fg = "include-color" } # For #include
+"label" = { fg = "ui-text" }
+"namespace" = { fg = "ui-text" }
+"operator" = { fg = "operator-color" }        # For &, !, &&, etc
+"punctuation" = { fg = "operator-color" }     # For (), [], {}
+"punctuation.delimiter" = { fg = "operator-color" }  # For some punctuation marks
+"special" = { fg = "note-green", modifiers = ["bold", "italic"] }
+"string" = { fg = "string-color" }        # Strings stay colored
+"constant.character" = { fg = "string-color" }  # For single quo
+"type" = { fg = "ui-text" }    
+"type.builtin" = { fg = "ui-text" }
+"type.parameter" = { fg = "ui-text" }
+"variable.builtin" = { fg = "ui-text" }
+"variable.parameter" = { fg = "ui-text" }
+"variable.other.member" = { fg = "ui-text" }
+"text.warning" = { fg = "#ffcd1c", modifiers = ["bold"] }
+"text.error" = { fg = "#f47868", modifiers = ["bold"] }
+
+# UI styling
+"markup.heading" = { fg = "warm-tan" }
+"markup.raw.inline" = { fg = "warm-tan" }
+"markup.bold" = { fg = "warm-tan", modifiers = ["bold"] }
+"markup.italic" = { fg = "warm-tan", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.list" = { fg = "warm-tan" }
+"markup.quote" = { fg = "warm-tan" }
+"markup.link.url" = { fg = "terracotta", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "terracotta" }
+"diff.plus" = "warm-tan"
+"diff.delta" = "burnt-orange"
+"diff.minus" = "red"
+"diagnostic.info".underline = { color = "comment-gray", style = "curl" }
+"diagnostic.hint".underline = { color = "warm-tan", style = "curl" }
+"diagnostic.warning".underline = { color = "burnt-orange", style = "curl" }
+"diagnostic.error".underline = { color = "red", style = "curl" }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"info" = { fg = "comment-gray", modifiers = ["bold"] }
+"hint" = { fg = "warm-tan", modifiers = ["bold"] }
+"warning" = { fg = "burnt-orange", modifiers = ["bold"] }
+"error" = { fg = "red", modifiers = ["bold"] }
+"ui.background" = { bg = "black" }
+"ui.gutter" = { bg = "dark-gray" }
+"ui.virtual" = { fg = "gray" }
+"ui.virtual.indent-guide" = { fg = "#252123" }
+"ui.virtual.whitespace" = { fg = "gray" }
+"ui.virtual.ruler" = { bg = "dark-gray" }
+"ui.virtual.inlay-hint" = { fg = "gray", modifiers = ["bold"] }
+"ui.virtual.jump-label" = { fg = "burnt-orange" }
+"ui.cursor" = { fg = "ui-text", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "white", bg = "burnt-orange" }
+"ui.cursor.match" = { fg = "ui-text", modifiers = ["underlined"] }
+"ui.selection" = { bg = "darker-gray" }
+"ui.selection.primary" = { bg = "darkest-gray" }
+"ui.cursorline.primary" = { bg = "dark-gray" }
+"ui.highlight" = { bg = "darker-gray" }
+"ui.highlight.frameline" = { bg = "darkest-gray" }
+"ui.linenr" = { fg = "gray" }
+"ui.linenr.selected" = { fg = "ui-text" }
+"ui.statusline" = { fg = "ui-text", bg = "dark-gray" }
+"ui.statusline.inactive" = { fg = "gray", bg = "darker-gray" }
+"ui.statusline.normal" = { fg = "black", bg = "warm-tan" }
+"ui.statusline.insert" = { fg = "black", bg = "terracotta" }
+"ui.statusline.select" = { fg = "black", bg = "burnt-orange" }
+"ui.text" = { fg = "ui-text" }
+"ui.text.focus" = { fg = "ui-text", bg = "darker-gray", modifiers = ["bold"] }
+"ui.help" = { fg = "ui-text", bg = "darker-gray" }
+"ui.popup" = { bg = "darker-gray" }
+"ui.window" = { fg = "dark-gray" }
+"ui.menu" = { fg = "ui-text", bg = "darker-gray" }
+"ui.menu.selected" = { fg = "black", bg = "warm-tan" }
+"ui.menu.scroll" = { fg = "ui-text", bg = "dark-gray" }
+"ui.debug" = { fg = "red" }
+
+[palette]
+# Autumn Night palette
+warm-gold = "#D49B52"        # For numbers
+warm-tan = "#BC8F6A"         # For some UI elements
+burnt-orange = "#B15F4F"     # For UI elements
+terracotta = "#A67A65"       # For UI elements
+comment-gray = "#626F7D"     # Comments
+red = "#A84D5B"             # Errors
+black = "#1F1C1E"           # Background
+ui-text = "#C5BFB6"         # Default text
+dark-gray = "#282426"       # UI elements
+darker-gray = "#312D2F"     # Selections
+darkest-gray = "#3A3638"    # Primary selections
+gray = "#4D4A4C"           # Subtle UI elements
+note-green = "#7EA87F"      # NOTE comments
+todo-blue = "#878EC0"       # TODO comments
+string-color = "#A6C88D"
+function-color = "#E6B673"
+operator-color = "#D4A373"
+preprocessor-color = "#C7956D"  # Warm brown for ifdef/endif
+include-color = "#B18F6A"       # Different warm brown for includes
