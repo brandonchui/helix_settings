@@ -1,4 +1,4 @@
-theme = "aaaa"
+theme = "aa"
 
 [editor]
 line-number = "relative"
@@ -15,6 +15,9 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+
+[editor.soft-wrap]
+enable = true
 
 [keys.normal]
 F9 = [
