@@ -10,7 +10,7 @@
   outputs = { self, nixpkgs, home-manager }: {
     homeManagerModules.default = { config, ... }: {
       home.file.".config/helix" = {
-        source = ./config;
+        source = ./.;
         recursive = true;
       };
     };
