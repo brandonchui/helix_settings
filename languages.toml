@@ -30,3 +30,39 @@ file-types = ["zig"]  # Extensions for Zig files
 auto-format = true    # Format on save
 language-servers = ["zls"]  # Reference the zls language server
 formatter = { command = "zig", args = ["fmt", "--stdin"] }
+
+# Svelte
+[[language]]
+name = "svelte"
+language-servers = [
+  "emmet-ls",
+  "svelteserver",
+  "typescript-language-server",
+  "tailwindcss-lannguage-server",
+  "vscode-eslint-language-server",
+  "tailwindcss-ls",
+]
+formatter = { command = "prettier", args = ["--parser", "svelte"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  "eslint-language-server",
+  "typescript-language-server",
+  "tailwindcss-ls",
+]
+formatter = { command = "prettier", args = ["--parser", "svelte"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  "emmet-ls",
+  "typescript-language-server",
+  "tailwindcss-lannguage-server",
+  "vscode-eslint-language-server",
+  "tailwindcss-ls",
+]
+formatter = { command = "prettier", args = ["--parser", "svelte"] }
+auto-format = true
