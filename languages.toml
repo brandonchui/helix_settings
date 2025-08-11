@@ -1,7 +1,7 @@
 # Define the language server configuration for clangd (used by both C and C++)
-[language-server.clangd]
-command = "clangd"
-args = ["--compile-commands-dir=compile_commands_directory"]
+#[language-server.clangd]
+#command = "clangd"
+#args = ["--experimental-modules-support"]
 
 # Define the language server configuration for Zig
 [language-server.zls]
@@ -13,15 +13,17 @@ name = "c"
 file-types = ["c", "h"]  # Extensions for C files
 auto-format = true       # Format on save
 language-servers = ["clangd"]  # Reference the clangd language server
-formatter = { command = "clang-format", args = ["--assume-filename", "file.c"] }
+formatter = { command = "clang-format", args = ["--assume-filename", "$FILEPATH", "-style=file"] }
+
 
 # C++ Language Configuration
 [[language]]
 name = "cpp"
-file-types = ["cpp", "hpp", "h", "cxx", "cc"]  # Extensions for C++ files
+file-types = ["cpp", "hpp", "h", "cxx", "cc", "cppm"]  # Extensions for C++ files
 auto-format = true       # Format on save
 language-servers = ["clangd"]  # Reference the clangd language server
-formatter = { command = "clang-format", args = ["--assume-filename", "file.cpp"] }
+formatter = { command = "clang-format", args = ["--assume-filename", "$FILEPATH", "-style=file"] }
+
 
 # Zig Language Configuration
 [[language]]
@@ -66,3 +68,40 @@ language-servers = [
 ]
 formatter = { command = "prettier", args = ["--parser", "svelte"] }
 auto-format = true
+
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
+
+[[language]]
+name = "wren"
+file-types = ["wren"]
+auto-format = true
+
+[[language]]
+name = "ocaml"
+scope = "source.ocaml"
+file-types = ["ml"]
+language-servers = ["ocamllsp"]
+auto-format = true
+
+[language.formatter]
+command = "ocamlformat"
+args = ["--name", "*.ml", "-"]
+
+# -----------------------------------------------
+
+[[language]]
+name = "ocaml.interface"
+scope = "source.ocaml.interface"
+file-types = ["mli"]
+language-servers = ["ocamllsp"]
+auto-format = true
+
+[language.formatter]
+command = "ocamlformat"
+args = ["--name", "*.mli", "-"]

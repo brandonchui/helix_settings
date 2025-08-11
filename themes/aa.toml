@@ -3,7 +3,7 @@
 "comment" = { fg = "comment-gray" }
 "comment.block.documentation" = { fg = "todo-blue", modifiers = ["bold", "italic"] }
 "constant" = { fg = "ui-text" }
-"constant.numeric" = { fg = "warm-gold" }  # Numbers stay colored
+"constant.numeric" = { fg = "warm-gold" }  # Numbers stay colored - prev warm-gold
 "constant.builtin" = { fg = "ui-text" }
 "constant.builtin.boolean" = { fg = "ui-text" }
 "constant.character.escape" = { fg = "ui-text" }
@@ -11,7 +11,7 @@
 "function" = { fg = "function-color" }
 "function.builtin" = { fg = "function-color" }
 "function.method" = { fg = "function-color" }
-"function.macro" = { fg = "function-color" }
+"function.macro" = { fg = "ui-text" }
 "keyword" = { fg = "ui-text" }
 "keyword.control" = { fg = "ui-text" }
 "keyword.control.conditional" = { fg = "ui-text" }
@@ -57,7 +57,7 @@
 "diagnostic.error".underline = { color = "red", style = "curl" }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-"info" = { fg = "comment-gray", modifiers = ["bold"] }
+"info" = { fg = "red", modifiers = ["bold"] }
 "hint" = { fg = "warm-tan", modifiers = ["bold"] }
 "warning" = { fg = "burnt-orange", modifiers = ["bold"] }
 "error" = { fg = "red", modifiers = ["bold"] }
@@ -72,7 +72,7 @@
 "ui.cursor" = { fg = "ui-text", modifiers = ["reversed"] }
 "ui.cursor.primary" = { fg = "white", bg = "burnt-orange" }
 "ui.cursor.match" = { fg = "ui-text", modifiers = ["underlined"] }
-"ui.selection" = { bg = "darker-gray" }
+"ui.selection" = { bg = "highlight-gray" }
 "ui.selection.primary" = { bg = "darkest-gray" }
 "ui.cursorline.primary" = { bg = "dark-gray" }
 "ui.highlight" = { bg = "darker-gray" }
@@ -115,3 +115,4 @@ function-color = "#E6B673"
 operator-color = "#D4A373"
 preprocessor-color = "#C7956D"  # Warm brown for ifdef/endif
 include-color = "#B18F6A"       # Different warm brown for includes
+highlight-gray = "#4E4547" # A warmer, slightly brighter selection highlight

@@ -4,6 +4,10 @@ theme = "aa"
 line-number = "relative"
 cursorline = true
 color-modes = true
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
 
 [editor.gutters]
 layout=["diagnostics"]
