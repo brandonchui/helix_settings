@@ -1,52 +1,41 @@
-# Define the language server configuration for clangd (used by both C and C++)
-#[language-server.clangd]
-#command = "clangd"
-#args = ["--experimental-modules-support"]
-
-# Define the language server configuration for Zig
-[language-server.zls]
-command = "zls"
-
 # C Language Configuration
 [[language]]
 name = "c"
-file-types = ["c", "h"]  # Extensions for C files
-auto-format = true       # Format on save
-language-servers = ["clangd"]  # Reference the clangd language server
+file-types = ["c", "h"]
+auto-format = true
+language-servers = ["clangd"]
 formatter = { command = "clang-format", args = ["--assume-filename", "$FILEPATH", "-style=file"] }
-
 
 # C++ Language Configuration
 [[language]]
 name = "cpp"
-file-types = ["cpp", "hpp", "h", "cxx", "cc", "cppm"]  # Extensions for C++ files
-auto-format = true       # Format on save
-language-servers = ["clangd"]  # Reference the clangd language server
+file-types = ["cpp", "hpp", "h", "cxx", "cc", "cppm"]
+auto-format = true
+language-servers = ["clangd"]
 formatter = { command = "clang-format", args = ["--assume-filename", "$FILEPATH", "-style=file"] }
-
 
 # Zig Language Configuration
 [[language]]
 name = "zig"
-file-types = ["zig"]  # Extensions for Zig files
-auto-format = true    # Format on save
-language-servers = ["zls"]  # Reference the zls language server
+file-types = ["zig"]
+auto-format = true
+language-servers = ["zls"]
 formatter = { command = "zig", args = ["fmt", "--stdin"] }
 
-# Svelte
+# Svelte Language Configuration
 [[language]]
 name = "svelte"
 language-servers = [
   "emmet-ls",
   "svelteserver",
   "typescript-language-server",
-  "tailwindcss-lannguage-server",
+  "tailwindcss-ls", # CORRECTED: Removed typo and duplicate
   "vscode-eslint-language-server",
-  "tailwindcss-ls",
 ]
 formatter = { command = "prettier", args = ["--parser", "svelte"] }
 auto-format = true
 
+# TypeScript Language Configuration
 [[language]]
 name = "typescript"
 language-servers = [
@@ -54,54 +43,51 @@ language-servers = [
   "typescript-language-server",
   "tailwindcss-ls",
 ]
-formatter = { command = "prettier", args = ["--parser", "svelte"] }
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
+# TSX Language Configuration
 [[language]]
 name = "tsx"
 language-servers = [
   "emmet-ls",
   "typescript-language-server",
-  "tailwindcss-lannguage-server",
+  "tailwindcss-ls", # CORRECTED: Removed typo and duplicate
   "vscode-eslint-language-server",
-  "tailwindcss-ls",
 ]
-formatter = { command = "prettier", args = ["--parser", "svelte"] }
+formatter = { command = "prettier", args = ["--parser", "tsx"] }
 auto-format = true
 
-
-[language-server.rust-analyzer.config.check]
-command = "clippy"
-
-[language-server.rust-analyzer.config.cargo]
-features = "all"
-
-
+# Wren Language Configuration
 [[language]]
 name = "wren"
 file-types = ["wren"]
 auto-format = true
 
+# OCaml Language Configuration
 [[language]]
 name = "ocaml"
 scope = "source.ocaml"
 file-types = ["ml"]
 language-servers = ["ocamllsp"]
 auto-format = true
+formatter = { command = "ocamlformat", args = ["--name", "*.ml", "-"] }
 
-[language.formatter]
-command = "ocamlformat"
-args = ["--name", "*.ml", "-"]
-
-# -----------------------------------------------
-
+# OCaml Interface Language Configuration
 [[language]]
 name = "ocaml.interface"
 scope = "source.ocaml.interface"
 file-types = ["mli"]
 language-servers = ["ocamllsp"]
 auto-format = true
+formatter = { command = "ocamlformat", args = ["--name", "*.mli", "-"] }
 
-[language.formatter]
-command = "ocamlformat"
-args = ["--name", "*.mli", "-"]
+# --- Language Server Specific Settings ---
+[language-server.zls]
+command = "zls"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
