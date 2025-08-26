@@ -1,3 +1,5 @@
+Delete the runtime in helix folder
+
 C:\Users\brand\AppData\Roaming\helix
 ```bash
 # If these exist, back them up (they’ll override the packaged runtime/queries)
