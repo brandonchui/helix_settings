@@ -14,6 +14,14 @@ auto-format = true
 language-servers = ["clangd"]
 formatter = { command = "clang-format", args = ["--assume-filename", "$FILEPATH", "-style=file"] }
 
+# Slang
+[[language]]
+name = "slang"
+file-types = ["slang", "hlsl"] # Associates .slang and .hlsl files with this config
+language-servers = ["slangd"]
+auto-format = true
+
+
 # Zig Language Configuration
 [[language]]
 name = "zig"
@@ -82,9 +90,13 @@ language-servers = ["ocamllsp"]
 auto-format = true
 formatter = { command = "ocamlformat", args = ["--name", "*.mli", "-"] }
 
+
 # --- Language Server Specific Settings ---
 [language-server.zls]
 command = "zls"
+
+[language-server.slangd]
+command = "slangd"
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
