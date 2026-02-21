@@ -91,12 +91,31 @@ auto-format = true
 formatter = { command = "ocamlformat", args = ["--name", "*.mli", "-"] }
 
 
+# Jai Language Configuration
+[[language]]
+name = "jai"
+scope = "source.jai"
+file-types = ["jai"]
+roots = ["build.jai", "first.jai", "main.jai"]
+indent = { tab-width = 4, unit = "    " }
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["jails"]
+grammar = "jai"
+
+[[grammar]]
+name = "jai"
+source = { git = "https://github.com/constantitus/tree-sitter-jai", rev = "889f8b310fa005c668853ba40a1c6cfc060b1a8b" }
+
 # --- Language Server Specific Settings ---
 [language-server.zls]
 command = "zls"
 
 [language-server.slangd]
 command = "slangd"
+
+[language-server.jails]
+command = "jails"
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
