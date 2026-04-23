@@ -105,7 +105,7 @@ grammar = "jai"
 
 [[grammar]]
 name = "jai"
-source = { git = "https://github.com/constantitus/tree-sitter-jai", rev = "889f8b310fa005c668853ba40a1c6cfc060b1a8b" }
+source = { git = "https://github.com/constantitus/tree-sitter-jai", rev = "2763e5001856ea7b5047e780e8dec95a07072d59" }
 
 # --- Language Server Specific Settings ---
 [language-server.zls]
